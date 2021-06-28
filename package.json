@@ -1,6 +1,6 @@
 {
   "name": "@wagyu-swap-libs/uikit",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Set of UI components for wagyu projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
