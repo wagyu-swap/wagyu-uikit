@@ -6,6 +6,8 @@ import { Modal } from "../Modal";
 import WalletCard from "./WalletCard";
 import config from "./config";
 import { Login } from "./types";
+import Message from "../../components/Message/Message";
+import Text from "../../components/Text/Text";
 
 interface Props {
   login: Login;
@@ -21,6 +23,15 @@ const HelpLink = styled(Link)`
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
   <Modal title="Connect to a wallet" onDismiss={onDismiss}>
+    <Message variant={"danger"} mb={20}>
+      <Text maxWidth={"270px"} color="text">
+        1.&nbsp;&nbsp;Please switch network to Velas Test Network before connecting wallet.
+      </Text>
+      <Text maxWidth={"270px"} color="text">
+        2.&nbsp;&nbsp;When you are going to access this site from your phone, you need to install Metamask app.
+        And then you can access this site on Metamask app by using `Browser` function.
+      </Text>
+    </Message>
     {config.map((entry, index) => (
       <WalletCard
         key={entry.title}
